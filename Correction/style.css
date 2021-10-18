@@ -1,0 +1,29 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2rem 0;
+}
+
+[class*="item-"]{
+    height: 6rem;
+    background-color: blue;
+}
+
+.item-a, .item-c, .item-e {
+    grid-column: 2 / span 4;
+}
+
+.item-b, .item-d, .item-f {
+    grid-column: 8 / span 4;
+}
+
+@media screen and (max-width: 600px){
+
+    [class*="item-"]{
+        background-color: orange;
+        height: 10rem;
+        grid-column: 2 / span 10;
+    }
+
+}
+
