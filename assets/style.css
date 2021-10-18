@@ -1,0 +1,46 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2rem 0;
+   }
+
+
+
+[class*="cellule"]
+{
+    height: 6rem;
+    background-color: blueviolet;
+}   
+
+.cellule1 {
+    grid-columns: 2 / span 4;
+     }
+
+cellule2 {
+    grid-columns: 8 / span 4;
+     }
+
+cellule3 {
+    grid-columns: 2 / span 4;
+     }
+
+cellule4 {
+    grid-columns: 8 / span 4;
+     }
+
+cellule5 {
+    grid-columns: 2 / span 4;
+    }
+
+cellule6 {
+    grid-columns: 8 / span 4;
+      
+}
+
+@media screen and (max-width: 600px) {
+    [class*="cellule"] {
+        background-color: orange;
+        height: 10rem;
+        grid-column: 2 / span 10;
+    }
+}
